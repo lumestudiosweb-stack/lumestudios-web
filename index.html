@@ -164,20 +164,20 @@
            ═══════════════════════════════ */
         /* Floating logo — top-left, independent of nav pill */
         .nav-logo-fixed {
-            position: fixed; top: 18px; left: 32px; z-index: 110;
+            position: fixed; top: 12px; left: 24px; z-index: 110;
             display: flex; align-items: center;
             text-decoration: none;
         }
         .nav-logo-img {
-            height: 160px; width: auto; display: block;
-            filter: brightness(0) invert(1) drop-shadow(0 0 14px rgba(168,156,247,0.55));
+            height: 200px; width: auto; display: block;
+            filter: brightness(0) invert(1) drop-shadow(0 0 18px rgba(168,156,247,0.7));
             transition: filter 0.3s ease;
         }
         .nav-logo-fixed:hover .nav-logo-img {
-            filter: brightness(0) invert(1) drop-shadow(0 0 24px rgba(168,156,247,0.9));
+            filter: brightness(0) invert(1) drop-shadow(0 0 28px rgba(168,156,247,1));
         }
 
-        /* Nav pill — right side, links + CTA only */
+        /* Nav pill — right side, links only — hidden on mobile (no content there) */
         nav {
             position: fixed; top: 20px; right: 32px;
             display: flex; align-items: center; gap: 24px; padding: 12px 22px;
@@ -651,15 +651,16 @@
 
         /* ── TABLET (≤ 900px) ─────────────────────── */
         @media (max-width: 900px) {
+            /* Hide empty nav pill — no links or button visible on mobile */
+            nav { display: none; }
             .nav-links { display: none; }
             .contact-section { grid-template-columns: 1fr; gap: 30px; padding-bottom: 80px; }
             .footer-bottom { flex-direction: column; align-items: center; gap: 10px; }
             .main-wrapper { margin-bottom: 65dvh; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; }
             footer { height: 65dvh; }
-            /* Logo & nav pill on tablet */
-            .nav-logo-img { height: 110px; }
-            .nav-logo-fixed { top: 14px; left: 18px; z-index: 110; }
-            nav { top: 16px; right: 16px; gap: 14px; padding: 10px 18px; z-index: 105; }
+            /* Logo bigger & visible on tablet */
+            .nav-logo-img { height: 140px; }
+            .nav-logo-fixed { top: 10px; left: 16px; z-index: 110; }
         }
 
         /* ── MOBILE (≤ 600px) ─────────────────────── */
@@ -668,11 +669,10 @@
             .main-wrapper { margin-bottom: 68dvh; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; }
             footer { height: 68dvh; padding: 0 6% 60px; }
 
-            /* Logo & nav */
-            .nav-logo-img { height: 72px; }
-            .nav-logo-fixed { top: 10px; left: 12px; z-index: 110; }
-            nav { top: 12px; right: 12px; padding: 9px 16px; gap: 10px; z-index: 105; }
-            .widget-btn { padding: 8px 16px; font-size: 0.7rem; }
+            /* Logo bigger on mobile */
+            .nav-logo-img { height: 110px; }
+            .nav-logo-fixed { top: 8px; left: 12px; z-index: 110; }
+            nav { display: none; }
 
             /* Hero */
             .hero { height: 100dvh; padding: 0 6%; text-align: center; justify-content: center; }
@@ -713,10 +713,9 @@
             .main-wrapper { margin-bottom: 70dvh; }
             footer { height: 70dvh; padding: 0 6% 55px; }
 
-            .nav-logo-img { height: 60px; }
-            .nav-logo-fixed { top: 8px; left: 10px; }
-            nav { top: 10px; right: 10px; padding: 8px 14px; }
-            .widget-btn { padding: 7px 13px; font-size: 0.68rem; letter-spacing: 0.06em; }
+            .nav-logo-img { height: 90px; }
+            .nav-logo-fixed { top: 6px; left: 10px; }
+            nav { display: none; }
 
             .hero h1 { font-size: clamp(2.2rem, 13vw, 3.4rem); }
             .hero p { font-size: 0.8rem; }
