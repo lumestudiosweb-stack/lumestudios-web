@@ -78,7 +78,7 @@
             background-color: var(--bg); position: relative; z-index: 2; margin-bottom: 60dvh;
             border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.9); overflow: hidden; border-bottom: 1px solid var(--border);
-            will-change: transform, border-radius; transform-origin: bottom center;
+            transform-origin: bottom center;
         }
         
         .noise {
@@ -103,9 +103,9 @@
         .nav-links a { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); transition: color 0.3s; }
         .nav-links a:hover { color: var(--text); }
         .widget-btn {
-            background: var(--surface); border: 1px solid var(--border); backdrop-filter: blur(10px); color: var(--text);
+            background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--text);
             padding: 10px 24px; border-radius: 100px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
-            transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap;
+            transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap;
         }
         .widget-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
 
@@ -161,8 +161,8 @@
         .section-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 50px; text-align: center; font-weight: 600; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .service-widget {
-            background: var(--surface); border: 1px solid var(--border); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-radius: 20px;
-            padding: 35px; transition: all 0.4s ease; position: relative; overflow: hidden;
+            background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 20px;
+            padding: 35px; transition: border-color 0.4s ease, transform 0.4s ease; position: relative; overflow: hidden;
         }
         .service-widget::before {
             content: ''; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px;
@@ -181,8 +181,8 @@
         .portfolio { padding: 80px 5%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
         .portfolio-intro { text-align: center; color: var(--muted); max-width: 560px; margin: -25px auto 50px; font-size: 0.95rem; line-height: 1.6; font-weight: 300; }
         .portfolio-widget {
-            background: var(--surface); border: 1px solid var(--border); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-radius: 18px;
-            padding: 22px; transition: all 0.35s ease; display: flex; align-items: center; gap: 16px;
+            background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 18px;
+            padding: 22px; transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; display: flex; align-items: center; gap: 16px;
         }
         .portfolio-widget:hover { border-color: rgba(255,255,255,0.2); background: var(--surface-hover); transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
         .portfolio-favicon-wrap {
@@ -200,8 +200,8 @@
            ═══════════════════════════════ */
         .arcade-section { padding: 80px 5%; display: flex; flex-direction: column; align-items: center; background: rgba(0,0,0,0.2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);}
         .arcade-container {
-            background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 25px;
-            backdrop-filter: blur(10px); display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 400px;
+            background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 20px; padding: 25px;
+            display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 400px;
         }
         .game-stats { display: flex; justify-content: space-between; width: 100%; color: var(--muted); font-size: 0.85rem; font-weight: 500; text-transform: uppercase; }
         canvas { background: #000; border: 1px solid var(--border); border-radius: 12px; width: 100%; aspect-ratio: 1/1; touch-action: none; }
@@ -224,8 +224,8 @@
         .social-widget div h4 { font-size: 1.2rem; line-height: 1.3; padding-bottom: 4px; color: var(--text); }
 
         .booking-form {
-            background: var(--surface); border: 1px solid var(--border); padding: 30px; border-radius: 20px;
-            display: flex; flex-direction: column; gap: 15px; backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 30px; border-radius: 20px;
+            display: flex; flex-direction: column; gap: 15px;
         }
         .form-group { display: flex; flex-direction: column; gap: 5px; }
         .form-group label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
@@ -341,8 +341,6 @@
     </style>
   </head>
   <body>
-    <div class="noise">
-    </div>
     <div class="cursor-dot">
     </div>
     <div class="cursor-ring">
@@ -812,13 +810,18 @@
                 dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
             });
 
+            let rafId;
             const renderCursor = () => {
-                ringX += (mouseX - ringX) * 0.2; 
+                ringX += (mouseX - ringX) * 0.2;
                 ringY += (mouseY - ringY) * 0.2;
                 ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
-                requestAnimationFrame(renderCursor);
+                rafId = requestAnimationFrame(renderCursor);
             };
-            requestAnimationFrame(renderCursor);
+            rafId = requestAnimationFrame(renderCursor);
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) cancelAnimationFrame(rafId);
+                else rafId = requestAnimationFrame(renderCursor);
+            });
 
             document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
                 el.addEventListener('mouseenter', () => {
