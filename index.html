@@ -176,6 +176,26 @@
         .service-widget p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
 
         /* ═══════════════════════════════
+           PORTFOLIO (CLIENT WORK)
+           ═══════════════════════════════ */
+        .portfolio { padding: 80px 5%; max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
+        .portfolio-intro { text-align: center; color: var(--muted); max-width: 560px; margin: -25px auto 50px; font-size: 0.95rem; line-height: 1.6; font-weight: 300; }
+        .portfolio-widget {
+            background: var(--surface); border: 1px solid var(--border); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-radius: 18px;
+            padding: 22px; transition: all 0.35s ease; display: flex; align-items: center; gap: 16px;
+        }
+        .portfolio-widget:hover { border-color: rgba(255,255,255,0.2); background: var(--surface-hover); transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+        .portfolio-favicon-wrap {
+            width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;
+        }
+        .portfolio-favicon-wrap img { width: 24px; height: 24px; }
+        .portfolio-info h3 { font-size: 1.05rem; line-height: 1.3; color: var(--text); margin-bottom: 3px; }
+        .portfolio-info p { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+        .portfolio-visit { margin-left: auto; font-size: 0.7rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; opacity: 0; transform: translateX(-6px); transition: all 0.3s ease; }
+        .portfolio-widget:hover .portfolio-visit { opacity: 1; transform: translateX(0); }
+
+        /* ═══════════════════════════════
            ARCADE (SNAKE GAME)
            ═══════════════════════════════ */
         .arcade-section { padding: 80px 5%; display: flex; flex-direction: column; align-items: center; background: rgba(0,0,0,0.2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);}
@@ -358,6 +378,8 @@
         <div class="nav-links">
           <a href="#services">          Expertise
 </a>
+          <a href="#portfolio">          Portfolio
+</a>
           <a href="#arcade">          Arcade
 </a>
           <a href="#contact">          Connect
@@ -449,6 +471,93 @@
               </p>
             </div>
           </div>
+        </div>
+      </section>
+      <!-- PORTFOLIO SECTION -->
+      <section class="portfolio" id="portfolio">
+        <h2 class="section-title syne reveal">Trusted by 16+ Healthcare Brands</h2>
+        <p class="portfolio-intro reveal">From dental boutiques to ENT specialists and oncologists, we've designed and built premium, live websites for practices and brands across the region. Click any card to visit the real site.</p>
+        <div class="grid">
+          <a href="https://www.ahanaher.com/" target="_blank" rel="noopener" class="portfolio-widget reveal">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=ahanaher.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Ahana Aher</h3><p>Personal Brand</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://www.drshannonfernandes.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.05s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=drshannonfernandes.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Dr. Shannon Fernandes</h3><p>Dental Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://aikyaaspeciality.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.1s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=aikyaaspeciality.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Aikya Speciality</h3><p>Multi-Specialty Clinic</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://drkarthikks.com" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.15s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=drkarthikks.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Dr. Karthik K S</h3><p>Medical Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://drsharonrasquinha.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.2s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=drsharonrasquinha.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Dr. Sharon Rasquinha</h3><p>Dental Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://drshravanshetty.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.25s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=drshravanshetty.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Dr. Shravan Shetty</h3><p>Medical Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://draravindoncologist.com/" target="_blank" rel="noopener" class="portfolio-widget reveal">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=draravindoncologist.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Dr. Aravind</h3><p>Oncologist</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://dentalboutiquemlr.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.05s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=dentalboutiquemlr.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Dental Boutique MLR</h3><p>Dental Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://www.thedentalofficemlr.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.1s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=thedentalofficemlr.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">The Dental Office MLR</h3><p>Dental Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://drkrithishree.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.15s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=drkrithishree.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Dr. Krithi Shree</h3><p>Dental Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://rivelinaligners.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.2s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=rivelinaligners.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Rivelin Aligners</h3><p>Orthodontics</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://primedentalaesthetic.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.25s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=primedentalaesthetic.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Prime Dental Aesthetic</h3><p>Dental Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://drteethdentalcaremlr.com/" target="_blank" rel="noopener" class="portfolio-widget reveal">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=drteethdentalcaremlr.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Dr. Teeth Dental Care</h3><p>Dental Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://drpriyankasinghmlr.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.05s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=drpriyankasinghmlr.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Dr. Priyanka Singh</h3><p>Dental Practice</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://www.srisurakshamlr.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.1s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=srisurakshamlr.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Sri Suraksha MLR</h3><p>Healthcare Clinic</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
+          <a href="https://www.shravanentmlr.com/" target="_blank" rel="noopener" class="portfolio-widget reveal" style="transition-delay:0.15s">
+            <div class="portfolio-favicon-wrap"><img src="https://www.google.com/s2/favicons?domain=shravanentmlr.com&sz=64" alt="" loading="lazy" /></div>
+            <div class="portfolio-info"><h3 class="syne">Shravan ENT</h3><p>ENT Specialist</p></div>
+            <span class="portfolio-visit">Visit ↗</span>
+          </a>
         </div>
       </section>
       <!-- ARCADE SECTION (SNAKE GAME) -->
