@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,10 +32,10 @@
         @media (pointer: fine) { * { cursor: none; } }
 
         html { scroll-behavior: smooth; background-color: var(--bg); }
-        body { color: var(--text); font-family: &#39;Inter&#39;, sans-serif; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        body { color: var(--text); font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         
-        /* Fixed Line-Height for Headings to prevent clipping of &#39;g&#39;, &#39;p&#39;, &#39;y&#39; */
-        h1, h2, h3, h4, .syne { font-family: &#39;Syne&#39;, sans-serif; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+        /* Fixed Line-Height for Headings to prevent clipping of 'g', 'p', 'y' */
+        h1, h2, h3, h4, .syne { font-family: 'Syne', sans-serif; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
         a { text-decoration: none; color: inherit; }
 
         /* ═══════════════════════════════
@@ -66,7 +66,7 @@
         .intro-slit { width: 0px; height: 1px; background: var(--border); box-shadow: 0 0 15px var(--primary); transition: width 1s var(--ease); }
         .intro-text-mask { overflow: hidden; height: 60px; display: flex; align-items: flex-end; margin-bottom: 2px; }
         .intro-text {
-            font-family: &#39;Syne&#39;, sans-serif; font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 500; letter-spacing: 0.1em;
+            font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 500; letter-spacing: 0.1em;
             text-transform: uppercase; color: var(--text); transform: translateY(100%); transition: transform 1s var(--ease); opacity: 0;
         }
         .intro-subtext { position: absolute; bottom: -30px; font-size: 0.8rem; color: var(--muted); opacity: 0; transition: opacity 1s ease; text-align: center; }
@@ -83,7 +83,7 @@
         
         .noise {
             position: absolute; inset: 0; pointer-events: none; z-index: 9000; opacity: 0.04;
-            background-image: url(&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAIAAAACAAIAAgIAAAICAgICAgICAQAAAAQAAAAEAAABAAIAAgAAAAIAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwQDAwEAAAAB//8AACAAMPsAAAAAASUVORK5CYII=&#34;);
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAIAAAACAAIAAgIAAAICAgICAgICAQAAAAQAAAAEAAABAAIAAgAAAAIAAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAwQDAwEAAAAB//8AACAAMPsAAAAAASUVORK5CYII=");
             background-repeat: repeat;
         }
 
@@ -97,7 +97,7 @@
             border: 1px solid var(--border); border-radius: 100px; z-index: 100; transition: all 0.4s var(--ease);
         }
         nav.scrolled { background: rgba(3, 3, 5, 0.85); padding: 12px 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .logo { display: flex; align-items: center; gap: 8px; font-family: &#39;Syne&#39;, sans-serif; font-size: 1.2rem; font-weight: 700; }
+        .logo { display: flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; }
         .logo span { color: var(--secondary); }
         .nav-links { display: flex; gap: 30px; }
         .nav-links a { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); transition: color 0.3s; }
@@ -110,12 +110,12 @@
         .widget-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
 
         /* ═══════════════════════════════
-           HERO &amp; ORBITAL FEATURE
+           HERO & ORBITAL FEATURE
            ═══════════════════════════════ */
         .hero { height: 100dvh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 5%; position: relative; }
         
         .hero::before {
-            content: &#39;&#39;; position: absolute; width: 80vw; height: 80vw; max-width: 800px; max-height: 800px;
+            content: ''; position: absolute; width: 80vw; height: 80vw; max-width: 800px; max-height: 800px;
             background: radial-gradient(circle, rgba(91, 79, 207, 0.15) 0%, transparent 60%);
             top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; pointer-events: none;
         }
@@ -165,7 +165,7 @@
             padding: 35px; transition: all 0.4s ease; position: relative; overflow: hidden;
         }
         .service-widget::before {
-            content: &#39;&#39;; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px;
+            content: ''; position: absolute; top: -50px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px;
             background: radial-gradient(circle, rgba(91,79,207,0.4) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s ease; z-index: 0; pointer-events: none;
         }
         .service-widget:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-5px); }
@@ -187,7 +187,7 @@
         canvas { background: #000; border: 1px solid var(--border); border-radius: 12px; width: 100%; aspect-ratio: 1/1; touch-action: none; }
 
         /* ═══════════════════════════════
-           BOOKING &amp; CONTACT SECTION
+           BOOKING & CONTACT SECTION
            ═══════════════════════════════ */
         .contact-section { padding: 80px 5% 120px; max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .contact-col { display: flex; flex-direction: column; gap: 20px; }
@@ -200,7 +200,7 @@
         .social-widget .icon { font-size: 20px; color: var(--text); }
         .social-widget div p { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
         
-        /* Adjusted line-height and padding to prevent clipping of &#39;g&#39; */
+        /* Adjusted line-height and padding to prevent clipping of 'g' */
         .social-widget div h4 { font-size: 1.2rem; line-height: 1.3; padding-bottom: 4px; color: var(--text); }
 
         .booking-form {
@@ -212,7 +212,7 @@
         
         .form-group input, .form-group select, .form-group textarea {
             background: rgba(0,0,0,0.4); border: 1px solid var(--border); color: var(--text);
-            padding: 12px; border-radius: 8px; font-family: &#39;Inter&#39;, sans-serif; font-size: 16px; outline: none; transition: border 0.3s;
+            padding: 12px; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 16px; outline: none; transition: border 0.3s;
         }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--secondary); }
         .form-group input::-webkit-calendar-picker-indicator { filter: invert(1); cursor: pointer; }
@@ -246,7 +246,7 @@
         
         .chat-header { padding: 15px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
         .chat-header h4 { font-size: 0.95rem; display: flex; align-items: center; gap: 8px; line-height: 1.2;}
-        .chat-header h4::before { content: &#39;&#39;; display: block; width: 6px; height: 6px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 8px #00ff88;}
+        .chat-header h4::before { content: ''; display: block; width: 6px; height: 6px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 8px #00ff88;}
         .audio-toggle { background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 4px 8px; border-radius: 50px; font-size: 0.65rem; transition: color 0.3s; cursor: pointer; }
         .audio-toggle.active { color: var(--text); border-color: var(--secondary); }
 
@@ -258,7 +258,7 @@
         .chat-input-area { padding: 12px; border-top: 1px solid var(--border); display: flex; gap: 8px; background: #000; align-items: center; }
         .chat-input-area input {
             flex: 1; background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 10px; border-radius: 8px;
-            color: var(--text); outline: none; font-family: &#39;Inter&#39;, sans-serif; font-size: 14px;
+            color: var(--text); outline: none; font-family: 'Inter', sans-serif; font-size: 14px;
         }
         
         #chat-mic {
@@ -296,7 +296,7 @@
         .footer-bottom { position: absolute; bottom: 25px; width: 90%; display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--dim); text-transform: uppercase; }
 
         /* ═══════════════════════════════
-           ULTRA-THIN MOBILE &amp; RESPONSIVE
+           ULTRA-THIN MOBILE & RESPONSIVE
            ═══════════════════════════════ */
         .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -670,20 +670,20 @@
       /* ═══════════════════════════════
            INTRO ANIMATION
            ═══════════════════════════════ */
-        window.addEventListener(&#39;load&#39;, () =&gt; {
-            const introOverlay = document.getElementById(&#39;intro-overlay&#39;);
-            const slit = document.getElementById(&#39;intro-slit&#39;);
-            const text = document.getElementById(&#39;intro-text&#39;);
-            const subtext = document.getElementById(&#39;intro-subtext&#39;);
+        window.addEventListener('load', () => {
+            const introOverlay = document.getElementById('intro-overlay');
+            const slit = document.getElementById('intro-slit');
+            const text = document.getElementById('intro-text');
+            const subtext = document.getElementById('intro-subtext');
 
-            setTimeout(() =&gt; { slit.style.width = &#39;250px&#39;; }, 100);
-            setTimeout(() =&gt; { text.style.opacity = &#39;1&#39;; text.style.transform = &#39;translateY(0)&#39;; }, 600);
-            setTimeout(() =&gt; { subtext.style.opacity = &#39;1&#39;; }, 1000);
-            setTimeout(() =&gt; { 
-                introOverlay.style.opacity = &#39;0&#39;; 
-                setTimeout(() =&gt; {
-                    introOverlay.style.display = &#39;none&#39;;
-                    document.body.style.overflow = &#39;auto&#39;; 
+            setTimeout(() => { slit.style.width = '250px'; }, 100);
+            setTimeout(() => { text.style.opacity = '1'; text.style.transform = 'translateY(0)'; }, 600);
+            setTimeout(() => { subtext.style.opacity = '1'; }, 1000);
+            setTimeout(() => { 
+                introOverlay.style.opacity = '0'; 
+                setTimeout(() => {
+                    introOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto'; 
                 }, 800);
             }, 2800);
         });
@@ -691,19 +691,19 @@
         /* ═══════════════════════════════
            CUSTOM CURSOR
            ═══════════════════════════════ */
-        const isTouchDevice = window.matchMedia(&#34;(pointer: coarse)&#34;).matches;
+        const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
         if (!isTouchDevice) {
-            const dot = document.querySelector(&#39;.cursor-dot&#39;);
-            const ring = document.querySelector(&#39;.cursor-ring&#39;);
+            const dot = document.querySelector('.cursor-dot');
+            const ring = document.querySelector('.cursor-ring');
             let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
             let ringX = mouseX, ringY = mouseY;
 
-            window.addEventListener(&#39;mousemove&#39;, (e) =&gt; {
+            window.addEventListener('mousemove', (e) => {
                 mouseX = e.clientX; mouseY = e.clientY;
                 dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
             });
 
-            const renderCursor = () =&gt; {
+            const renderCursor = () => {
                 ringX += (mouseX - ringX) * 0.2; 
                 ringY += (mouseY - ringY) * 0.2;
                 ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
@@ -711,15 +711,15 @@
             };
             requestAnimationFrame(renderCursor);
 
-            document.querySelectorAll(&#39;a, button, input, select, textarea&#39;).forEach(el =&gt; {
-                el.addEventListener(&#39;mouseenter&#39;, () =&gt; {
-                    ring.style.width = &#39;50px&#39;; ring.style.height = &#39;50px&#39;;
-                    ring.style.borderColor = &#39;rgba(255,255,255,0.8)&#39;; ring.style.backgroundColor = &#39;rgba(255,255,255,0.05)&#39;;
+            document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    ring.style.width = '50px'; ring.style.height = '50px';
+                    ring.style.borderColor = 'rgba(255,255,255,0.8)'; ring.style.backgroundColor = 'rgba(255,255,255,0.05)';
                     dot.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(0)`;
                 });
-                el.addEventListener(&#39;mouseleave&#39;, () =&gt; {
-                    ring.style.width = &#39;35px&#39;; ring.style.height = &#39;35px&#39;;
-                    ring.style.borderColor = &#39;rgba(255,255,255,0.3)&#39;; ring.style.backgroundColor = &#39;transparent&#39;;
+                el.addEventListener('mouseleave', () => {
+                    ring.style.width = '35px'; ring.style.height = '35px';
+                    ring.style.borderColor = 'rgba(255,255,255,0.3)'; ring.style.backgroundColor = 'transparent';
                     dot.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1)`;
                 });
             });
@@ -728,22 +728,22 @@
         /* ═══════════════════════════════
            THROTTLED SCROLL LOGIC
            ═══════════════════════════════ */
-        const navbar = document.getElementById(&#39;navbar&#39;);
-        const pageContent = document.getElementById(&#39;page-content&#39;);
+        const navbar = document.getElementById('navbar');
+        const pageContent = document.getElementById('page-content');
         let isScrolling = false;
 
-        window.addEventListener(&#39;scroll&#39;, () =&gt; {
+        window.addEventListener('scroll', () => {
             if (!isScrolling) {
-                window.requestAnimationFrame(() =&gt; {
-                    if (window.scrollY &gt; 50) navbar.classList.add(&#39;scrolled&#39;);
-                    else navbar.classList.remove(&#39;scrolled&#39;);
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 50) navbar.classList.add('scrolled');
+                    else navbar.classList.remove('scrolled');
 
                     const bodyHeight = document.body.offsetHeight;
                     const scrollY = window.scrollY + window.innerHeight;
-                    const footerHeight = window.innerHeight * (window.innerWidth &lt;= 900 ? 0.7 : 0.6); 
+                    const footerHeight = window.innerHeight * (window.innerWidth <= 900 ? 0.7 : 0.6); 
                     const threshold = bodyHeight - footerHeight; 
                     
-                    if (scrollY &gt; threshold) {
+                    if (scrollY > threshold) {
                         let progress = (scrollY - threshold) / footerHeight;
                         progress = Math.min(1, Math.max(0, progress));
                         const scale = 1 - (progress * 0.04);
@@ -760,64 +760,64 @@
             }
         }, { passive: true });
 
-        const revealObserver = new IntersectionObserver((entries, observer) =&gt; {
-            entries.forEach(entry =&gt; {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add(&#39;active&#39;);
+                    entry.target.classList.add('active');
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: &#34;0px 0px -50px 0px&#34; });
-        document.querySelectorAll(&#39;.reveal&#39;).forEach(el =&gt; revealObserver.observe(el));
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
         /* ═══════════════════════════════
            WHATSAPP BOOKING SUBMISSION
            ═══════════════════════════════ */
-        document.getElementById(&#39;booking-form&#39;).addEventListener(&#39;submit&#39;, function(event) {
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
             event.preventDefault(); 
             
-            const name = document.getElementById(&#39;book-name&#39;).value;
-            const email = document.getElementById(&#39;book-email&#39;).value;
-            const date = document.getElementById(&#39;book-date&#39;).value;
-            const time = document.getElementById(&#39;book-time&#39;).value;
-            const service = document.getElementById(&#39;book-service&#39;).value;
-            const details = document.getElementById(&#39;book-details&#39;).value;
+            const name = document.getElementById('book-name').value;
+            const email = document.getElementById('book-email').value;
+            const date = document.getElementById('book-date').value;
+            const time = document.getElementById('book-time').value;
+            const service = document.getElementById('book-service').value;
+            const details = document.getElementById('book-details').value;
 
             const message = `Hello LuMe Studios! 👋\n\nI would like to schedule a project discussion.\n\n*Name:* ${name}\n*Email:* ${email}\n*Date:* ${date}\n*Time:* ${time}\n*Service:* ${service}\n\n*Project Details:*\n${details}\n\nPlease confirm this slot and share the Google Meet link with me. Thank you!`;
             
             const whatsappUrl = `https://wa.me/919449450904?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, &#39;_blank&#39;);
+            window.open(whatsappUrl, '_blank');
         });
 
         /* ═══════════════════════════════
-           ANSH CHATBOT (Voice &amp; Text)
+           ANSH CHATBOT (Voice & Text)
            ═══════════════════════════════ */
-        const chatOrb = document.getElementById(&#39;chat-orb&#39;);
-        const chatWindow = document.getElementById(&#39;chat-window&#39;);
-        const closeChat = document.getElementById(&#39;close-chat&#39;);
-        const chatInput = document.getElementById(&#39;chat-input&#39;);
-        const chatSend = document.getElementById(&#39;chat-send&#39;);
-        const chatMessages = document.getElementById(&#39;chat-messages&#39;);
-        const audioToggle = document.getElementById(&#39;audio-toggle&#39;);
-        const chatMic = document.getElementById(&#39;chat-mic&#39;);
+        const chatOrb = document.getElementById('chat-orb');
+        const chatWindow = document.getElementById('chat-window');
+        const closeChat = document.getElementById('close-chat');
+        const chatInput = document.getElementById('chat-input');
+        const chatSend = document.getElementById('chat-send');
+        const chatMessages = document.getElementById('chat-messages');
+        const audioToggle = document.getElementById('audio-toggle');
+        const chatMic = document.getElementById('chat-mic');
         
         let audioEnabled = false;
 
-        chatOrb.addEventListener(&#39;click&#39;, () =&gt; chatWindow.classList.add(&#39;open&#39;));
-        closeChat.addEventListener(&#39;click&#39;, () =&gt; chatWindow.classList.remove(&#39;open&#39;));
+        chatOrb.addEventListener('click', () => chatWindow.classList.add('open'));
+        closeChat.addEventListener('click', () => chatWindow.classList.remove('open'));
         
-        audioToggle.addEventListener(&#39;click&#39;, () =&gt; {
+        audioToggle.addEventListener('click', () => {
             audioEnabled = !audioEnabled;
-            audioToggle.innerText = audioEnabled ? &#34;Sound: ON&#34; : &#34;Sound: OFF&#34;;
-            audioToggle.classList.toggle(&#39;active&#39;, audioEnabled);
-            if(audioEnabled &amp;&amp; &#39;speechSynthesis&#39; in window) {
-                let s = new SpeechSynthesisUtterance(&#34;&#34;);
+            audioToggle.innerText = audioEnabled ? "Sound: ON" : "Sound: OFF";
+            audioToggle.classList.toggle('active', audioEnabled);
+            if(audioEnabled && 'speechSynthesis' in window) {
+                let s = new SpeechSynthesisUtterance("");
                 window.speechSynthesis.speak(s);
             }
         });
 
         function botSpeak(text) {
-            if(!audioEnabled || !(&#39;speechSynthesis&#39; in window)) return;
+            if(!audioEnabled || !('speechSynthesis' in window)) return;
             window.speechSynthesis.cancel(); 
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.pitch = 0.9; 
@@ -826,11 +826,11 @@
         }
 
         function appendMessage(text, sender) {
-            const div = document.createElement(&#39;div&#39;);
+            const div = document.createElement('div');
             div.className = `msg ${sender}`;
-            if(text === &#39;typing&#39;) {
-                div.classList.add(&#39;typing&#39;);
-                div.innerHTML = &#39;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&#39;;
+            if(text === 'typing') {
+                div.classList.add('typing');
+                div.innerHTML = '<span></span><span></span><span></span>';
             } else {
                 div.innerText = text;
             }
@@ -842,80 +842,80 @@
         function handleChat(messageText) {
             const msg = messageText || chatInput.value.trim();
             if(!msg) return;
-            appendMessage(msg, &#39;user&#39;);
-            chatInput.value = &#39;&#39;;
+            appendMessage(msg, 'user');
+            chatInput.value = '';
 
-            const typingIndicator = appendMessage(&#39;typing&#39;, &#39;bot&#39;);
+            const typingIndicator = appendMessage('typing', 'bot');
             const lowerMsg = msg.toLowerCase();
             
-            setTimeout(() =&gt; {
+            setTimeout(() => {
                 typingIndicator.remove(); 
 
-                let response = &#34;Analyzing your request... As an advanced AI, I can tell you LuMe Studios is equipped to handle that perfectly. Fill out the booking form to finalize the specs with the human team.&#34;;
+                let response = "Analyzing your request... As an advanced AI, I can tell you LuMe Studios is equipped to handle that perfectly. Fill out the booking form to finalize the specs with the human team.";
                 
-                if(lowerMsg.includes(&#39;hello&#39;) || lowerMsg.includes(&#39;hi&#39;) || lowerMsg.includes(&#39;hey&#39;)) 
-                    response = &#34;Yo! How&#39;s your day going? Need a cutting-edge website, some branding advice, or just wanna play some snake?&#34;;
-                if(lowerMsg.includes(&#39;book&#39;) || lowerMsg.includes(&#39;meet&#39;) || lowerMsg.includes(&#39;contact&#39;)) 
-                    response = &#34;Awesome! Use the booking form right here in the Connect section to grab a slot. It connects directly to our WhatsApp.&#34;;
-                if(lowerMsg.includes(&#39;game&#39;) || lowerMsg.includes(&#39;snake&#39;)) 
-                    response = &#34;Oh yeah! Scroll up to the Arcade section and try to beat the high score. Good luck.&#34;;
-                if(lowerMsg.includes(&#39;service&#39;) || lowerMsg.includes(&#39;do&#39;) || lowerMsg.includes(&#39;build&#39;)) 
-                    response = &#34;We build blazing fast, premium experiences. Web Design, UI/UX, and No-code development using React, Webflow, and Framer. What do you need?&#34;;
-                if(lowerMsg.includes(&#39;ansh&#39;) || lowerMsg.includes(&#39;who are you&#39;) || lowerMsg.includes(&#39;name&#39;)) 
-                    response = &#34;I&#39;m Ansh, the AI core powering LuMe Studios. I handle the digital frontlines while the human team crafts the masterpieces.&#34;;
+                if(lowerMsg.includes('hello') || lowerMsg.includes('hi') || lowerMsg.includes('hey')) 
+                    response = "Yo! How's your day going? Need a cutting-edge website, some branding advice, or just wanna play some snake?";
+                if(lowerMsg.includes('book') || lowerMsg.includes('meet') || lowerMsg.includes('contact')) 
+                    response = "Awesome! Use the booking form right here in the Connect section to grab a slot. It connects directly to our WhatsApp.";
+                if(lowerMsg.includes('game') || lowerMsg.includes('snake')) 
+                    response = "Oh yeah! Scroll up to the Arcade section and try to beat the high score. Good luck.";
+                if(lowerMsg.includes('service') || lowerMsg.includes('do') || lowerMsg.includes('build')) 
+                    response = "We build blazing fast, premium experiences. Web Design, UI/UX, and No-code development using React, Webflow, and Framer. What do you need?";
+                if(lowerMsg.includes('ansh') || lowerMsg.includes('who are you') || lowerMsg.includes('name')) 
+                    response = "I'm Ansh, the AI core powering LuMe Studios. I handle the digital frontlines while the human team crafts the masterpieces.";
                 
-                appendMessage(response, &#39;bot&#39;);
+                appendMessage(response, 'bot');
                 botSpeak(response);
             }, 800); 
         }
 
-        chatSend.addEventListener(&#39;click&#39;, () =&gt; handleChat());
-        chatInput.addEventListener(&#39;keypress&#39;, (e) =&gt; { if(e.key === &#39;Enter&#39;) handleChat(); });
+        chatSend.addEventListener('click', () => handleChat());
+        chatInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') handleChat(); });
 
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
         if (SpeechRecognition) {
             const recognition = new SpeechRecognition();
             recognition.continuous = false;
-            recognition.lang = &#39;en-US&#39;;
+            recognition.lang = 'en-US';
 
-            chatMic.addEventListener(&#39;click&#39;, () =&gt; {
+            chatMic.addEventListener('click', () => {
                 try {
                     recognition.start();
-                    chatMic.classList.add(&#39;recording&#39;);
-                    chatInput.placeholder = &#34;Listening...&#34;;
+                    chatMic.classList.add('recording');
+                    chatInput.placeholder = "Listening...";
                 } catch(e) {
-                    console.log(&#34;Speech recognition error.&#34;, e);
+                    console.log("Speech recognition error.", e);
                 }
             });
 
-            recognition.onresult = (event) =&gt; {
+            recognition.onresult = (event) => {
                 const transcript = event.results[0][0].transcript;
-                chatMic.classList.remove(&#39;recording&#39;);
-                chatInput.placeholder = &#34;Type or speak to Ansh...&#34;;
+                chatMic.classList.remove('recording');
+                chatInput.placeholder = "Type or speak to Ansh...";
                 handleChat(transcript); 
             };
 
-            recognition.onend = () =&gt; {
-                chatMic.classList.remove(&#39;recording&#39;);
-                chatInput.placeholder = &#34;Type or speak to Ansh...&#34;;
+            recognition.onend = () => {
+                chatMic.classList.remove('recording');
+                chatInput.placeholder = "Type or speak to Ansh...";
             };
             
-            recognition.onerror = (e) =&gt; {
-                chatMic.classList.remove(&#39;recording&#39;);
-                chatInput.placeholder = &#34;Error. Try typing.&#34;;
+            recognition.onerror = (e) => {
+                chatMic.classList.remove('recording');
+                chatInput.placeholder = "Error. Try typing.";
             };
         } else {
-            chatMic.style.display = &#39;none&#39;; 
+            chatMic.style.display = 'none'; 
         }
 
         /* ═══════════════════════════════
            ARCADE: RESPONSIVE SNAKE GAME
            ═══════════════════════════════ */
-        const canvas = document.getElementById(&#39;game-canvas&#39;);
-        const ctx = canvas.getContext(&#39;2d&#39;);
-        const startBtn = document.getElementById(&#39;start-btn&#39;);
-        const scoreEl = document.getElementById(&#39;score&#39;);
-        const highscoreEl = document.getElementById(&#39;highscore&#39;);
+        const canvas = document.getElementById('game-canvas');
+        const ctx = canvas.getContext('2d');
+        const startBtn = document.getElementById('start-btn');
+        const scoreEl = document.getElementById('score');
+        const highscoreEl = document.getElementById('highscore');
 
         function resizeCanvas() {
             const size = Math.min(window.innerWidth - 60, 400); 
@@ -923,7 +923,7 @@
             canvas.height = size;
         }
         resizeCanvas();
-        window.addEventListener(&#39;resize&#39;, () =&gt; { if(!gameActive) resizeCanvas(); });
+        window.addEventListener('resize', () => { if(!gameActive) resizeCanvas(); });
 
         let gridSize = 20;
         let tileCount = canvas.width / gridSize;
@@ -938,7 +938,7 @@
             gameActive = true;
             if(gameLoop) clearInterval(gameLoop);
             gameLoop = setInterval(updateGame, 120);
-            startBtn.innerText = &#34;Playing... (Swipe or Arrows)&#34;;
+            startBtn.innerText = "Playing... (Swipe or Arrows)";
         }
 
         function placeApple() {
@@ -950,16 +950,16 @@
             if(!gameActive) return;
             const head = {x: snake[0].x + dx, y: snake[0].y + dy};
             
-            if(head.x &lt; 0 || head.x &gt;= tileCount || head.y &lt; 0 || head.y &gt;= tileCount) return gameOver();
-            for(let i=0; i&lt;snake.length; i++) {
-                if(head.x === snake[i].x &amp;&amp; head.y === snake[i].y &amp;&amp; snake.length &gt; 1) return gameOver();
+            if(head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) return gameOver();
+            for(let i=0; i<snake.length; i++) {
+                if(head.x === snake[i].x && head.y === snake[i].y && snake.length > 1) return gameOver();
             }
 
             snake.unshift(head);
 
-            if(head.x === apple.x &amp;&amp; head.y === apple.y) {
+            if(head.x === apple.x && head.y === apple.y) {
                 score += 10; scoreEl.innerText = score;
-                if(score &gt; highscore) { highscore = score; highscoreEl.innerText = highscore; }
+                if(score > highscore) { highscore = score; highscoreEl.innerText = highscore; }
                 placeApple();
             } else {
                 snake.pop(); 
@@ -968,15 +968,15 @@
         }
 
         function drawGame() {
-            ctx.fillStyle = &#39;#050508&#39;; ctx.fillRect(0, 0, canvas.width, canvas.height); 
+            ctx.fillStyle = '#050508'; ctx.fillRect(0, 0, canvas.width, canvas.height); 
             
-            ctx.fillStyle = &#39;#f5f5f7&#39;; 
-            ctx.shadowBlur = 10; ctx.shadowColor = &#39;#f5f5f7&#39;;
+            ctx.fillStyle = '#f5f5f7'; 
+            ctx.shadowBlur = 10; ctx.shadowColor = '#f5f5f7';
             ctx.fillRect(apple.x * gridSize + 2, apple.y * gridSize + 2, gridSize - 4, gridSize - 4);
             
-            ctx.fillStyle = &#39;#5b4fcf&#39;; 
-            ctx.shadowBlur = 10; ctx.shadowColor = &#39;#7c6ef5&#39;;
-            snake.forEach(part =&gt; {
+            ctx.fillStyle = '#5b4fcf'; 
+            ctx.shadowBlur = 10; ctx.shadowColor = '#7c6ef5';
+            snake.forEach(part => {
                 ctx.fillRect(part.x * gridSize + 1, part.y * gridSize + 1, gridSize - 2, gridSize - 2);
             });
             ctx.shadowBlur = 0;
@@ -985,26 +985,26 @@
         function gameOver() {
             gameActive = false;
             clearInterval(gameLoop);
-            ctx.fillStyle = &#34;rgba(0,0,0,0.7)&#34;; ctx.fillRect(0,0,canvas.width, canvas.height);
-            ctx.fillStyle = &#34;#fff&#34;; ctx.font = &#34;bold 24px Syne&#34;; ctx.textAlign = &#34;center&#34;;
-            ctx.fillText(&#34;GAME OVER&#34;, canvas.width/2, canvas.height/2);
-            startBtn.innerText = &#34;Play Again&#34;;
+            ctx.fillStyle = "rgba(0,0,0,0.7)"; ctx.fillRect(0,0,canvas.width, canvas.height);
+            ctx.fillStyle = "#fff"; ctx.font = "bold 24px Syne"; ctx.textAlign = "center";
+            ctx.fillText("GAME OVER", canvas.width/2, canvas.height/2);
+            startBtn.innerText = "Play Again";
         }
 
         drawGame();
-        startBtn.addEventListener(&#39;click&#39;, () =&gt; { if(!gameActive) { dx=1; dy=0; resetGame(); } });
+        startBtn.addEventListener('click', () => { if(!gameActive) { dx=1; dy=0; resetGame(); } });
 
-        document.addEventListener(&#39;keydown&#39;, e =&gt; {
+        document.addEventListener('keydown', e => {
             if(!gameActive) return;
             if([37,38,39,40].includes(e.keyCode)) e.preventDefault(); 
-            if(e.key === &#39;ArrowUp&#39; &amp;&amp; dy === 0) { dx = 0; dy = -1; }
-            if(e.key === &#39;ArrowDown&#39; &amp;&amp; dy === 0) { dx = 0; dy = 1; }
-            if(e.key === &#39;ArrowLeft&#39; &amp;&amp; dx === 0) { dx = -1; dy = 0; }
-            if(e.key === &#39;ArrowRight&#39; &amp;&amp; dx === 0) { dx = 1; dy = 0; }
+            if(e.key === 'ArrowUp' && dy === 0) { dx = 0; dy = -1; }
+            if(e.key === 'ArrowDown' && dy === 0) { dx = 0; dy = 1; }
+            if(e.key === 'ArrowLeft' && dx === 0) { dx = -1; dy = 0; }
+            if(e.key === 'ArrowRight' && dx === 0) { dx = 1; dy = 0; }
         });
 
         let touchStartX = 0, touchStartY = 0;
-        canvas.addEventListener(&#39;touchstart&#39;, e =&gt; {
+        canvas.addEventListener('touchstart', e => {
             if(gameActive) {
                 touchStartX = e.changedTouches[0].screenX;
                 touchStartY = e.changedTouches[0].screenY;
@@ -1012,7 +1012,7 @@
             }
         }, {passive: false});
 
-        canvas.addEventListener(&#39;touchend&#39;, e =&gt; {
+        canvas.addEventListener('touchend', e => {
             if(!gameActive) return;
             e.preventDefault();
             let touchEndX = e.changedTouches[0].screenX;
@@ -1020,14 +1020,14 @@
             let diffX = touchEndX - touchStartX;
             let diffY = touchEndY - touchStartY;
             
-            if(Math.abs(diffX) &lt; 20 &amp;&amp; Math.abs(diffY) &lt; 20) return;
+            if(Math.abs(diffX) < 20 && Math.abs(diffY) < 20) return;
 
-            if(Math.abs(diffX) &gt; Math.abs(diffY)) {
-                if(diffX &gt; 0 &amp;&amp; dx === 0) { dx = 1; dy = 0; } 
-                else if(diffX &lt; 0 &amp;&amp; dx === 0) { dx = -1; dy = 0; } 
+            if(Math.abs(diffX) > Math.abs(diffY)) {
+                if(diffX > 0 && dx === 0) { dx = 1; dy = 0; } 
+                else if(diffX < 0 && dx === 0) { dx = -1; dy = 0; } 
             } else {
-                if(diffY &gt; 0 &amp;&amp; dy === 0) { dx = 0; dy = 1; } 
-                else if(diffY &lt; 0 &amp;&amp; dy === 0) { dx = 0; dy = -1; } 
+                if(diffY > 0 && dy === 0) { dx = 0; dy = 1; } 
+                else if(diffY < 0 && dy === 0) { dx = 0; dy = -1; } 
             }
         }, {passive: false});
     </script>
