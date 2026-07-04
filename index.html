@@ -30,9 +30,6 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Hide default cursor only on non-touch devices */
-        @media (pointer: fine) { * { cursor: none; } }
-
         html { scroll-behavior: smooth; background-color: #000; }
         body { color: var(--text); font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif; font-weight: 500; line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 
@@ -77,22 +74,6 @@
             padding-bottom: 0.06em;
         }
         a { text-decoration: none; color: inherit; }
-
-        /* ═══════════════════════════════
-           CUSTOM MINIMAL CURSOR
-           ═══════════════════════════════ */
-        .cursor-dot {
-            position: fixed; width: 5px; height: 5px; background-color: var(--text);
-            border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); z-index: 9999;
-            will-change: transform;
-        }
-        .cursor-ring {
-            position: fixed; width: 35px; height: 35px; border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%);
-            transition: width 0.3s var(--ease), height 0.3s var(--ease), background-color 0.3s; z-index: 9998;
-            will-change: transform, width, height;
-        }
-        @media (pointer: coarse) { .cursor-dot, .cursor-ring { display: none !important; } }
 
         /* ═══════════════════════════════
            LOGO INTRO OVERLAY
@@ -867,9 +848,6 @@
     <!-- SHADER BACKGROUND (WebGL) -->
     <canvas id="shader-bg"></canvas>
 
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-
     <!-- LOGO INTRO -->
     <div id="intro-overlay">
         <div class="intro-logo-wrap">
@@ -1326,48 +1304,6 @@
             // CSS handles bar fill (2s + 0.4s delay); dismiss 400ms after bar completes
             setTimeout(dismiss, 2900);
         })();
-
-        /* ═══════════════════════════════
-           CUSTOM CURSOR
-           ═══════════════════════════════ */
-        const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-        if (!isTouchDevice) {
-            const dot = document.querySelector('.cursor-dot');
-            const ring = document.querySelector('.cursor-ring');
-            let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-            let ringX = mouseX, ringY = mouseY;
-
-            window.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX; mouseY = e.clientY;
-                dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-            });
-
-            let cursorRafId;
-            const renderCursor = () => {
-                ringX += (mouseX - ringX) * 0.2;
-                ringY += (mouseY - ringY) * 0.2;
-                ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
-                cursorRafId = requestAnimationFrame(renderCursor);
-            };
-            cursorRafId = requestAnimationFrame(renderCursor);
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) cancelAnimationFrame(cursorRafId);
-                else cursorRafId = requestAnimationFrame(renderCursor);
-            });
-
-            document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    ring.style.width = '50px'; ring.style.height = '50px';
-                    ring.style.borderColor = 'rgba(255,255,255,0.8)'; ring.style.backgroundColor = 'rgba(255,255,255,0.05)';
-                    dot.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(0)`;
-                });
-                el.addEventListener('mouseleave', () => {
-                    ring.style.width = '35px'; ring.style.height = '35px';
-                    ring.style.borderColor = 'rgba(255,255,255,0.3)'; ring.style.backgroundColor = 'transparent';
-                    dot.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(1)`;
-                });
-            });
-        }
 
         /* ═══════════════════════════════
            THROTTLED SCROLL LOGIC
